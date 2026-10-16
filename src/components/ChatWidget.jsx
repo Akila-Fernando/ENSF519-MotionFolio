@@ -29,7 +29,7 @@ const COMMANDS = {
             "  clear      Clear terminal",
             "  ──────────────────────────────",
             "",
-            "  Or just ask me anything about Zickrian!"
+            "  Or just ask me anything about janedoe!"
         ].join('\n')
     },
     ls: {
@@ -60,7 +60,7 @@ const COMMANDS = {
             }
             return [
                 "        ╭──────────────────────╮",
-                "  ⣿⣿    │  zickrian@portfolio   │",
+                "  ⣿⣿    │  JohnDoe@portfolio   │",
                 "  ⣿⣿    ╰──────────────────────╯",
                 "  ⣿⣿    ─────────────────────────",
                 `  ⣿⣿    Name     : ${p.name}`,
@@ -175,7 +175,7 @@ const ChatWidget = ({ isOpen: controlledIsOpen, onOpenChange }) => {
     const isOpen = controlledIsOpen ?? internalIsOpen;
     const setIsOpen = onOpenChange ?? setInternalIsOpen;
     const [messages, setMessages] = useState([
-        { type: 'bot', text: "System Online. I'm Zickrian's AI Assistant. Type `help` for commands, or ask me anything!" }
+        { type: 'bot', text: "System Online. I'm JaneDoe AI Assistant. Type `help` for commands, or ask me anything!" }
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isTyping, setIsTyping] = useState(false);

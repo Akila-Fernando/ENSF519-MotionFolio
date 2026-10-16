@@ -3,8 +3,8 @@ import { Gsap, useGsapReducedMotion, useGsapScroll, useGsapTransform } from '../
 import { Terminal, Code2, Database, Cpu, Download, ArrowUpRight } from 'lucide-react';
 
 // Shared Intl formatter — created once, reused on every tick
-const jakartaFormatter = new Intl.DateTimeFormat('en-US', {
-  timeZone: 'Asia/Jakarta',
+const calgaryFormat = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/Edmonton',
   hour: '2-digit',
   minute: '2-digit',
   second: '2-digit',
@@ -19,7 +19,7 @@ const LocationTimeBadge = () => {
   useEffect(() => {
     const update = () => {
       if (timeRef.current) {
-        timeRef.current.textContent = jakartaFormatter.format(new Date());
+        timeRef.current.textContent = calgaryFormat.format(new Date());
       }
     };
     update();
@@ -30,7 +30,7 @@ const LocationTimeBadge = () => {
   return (
     <div className="flex items-center justify-center gap-3 sm:gap-5 font-mono text-xs uppercase tracking-[0.15em] text-black/50">
       <div className="flex items-center gap-2">
-        <span className="font-bold text-black/70">Based in Indonesia</span>
+        <span className="font-bold text-black/70">Based in Schulich</span>
       </div>
       <div className="w-[1px] h-3 bg-black/15" />
       <div className="flex items-center gap-1.5 tabular-nums">
@@ -232,7 +232,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
             transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="text-[clamp(4.25rem,14vw,9rem)] font-black uppercase tracking-tight text-black leading-[0.88]"
           >
-            FIRDAUS
+            John
           </Gsap.h1>
 
           <Gsap.h1
@@ -241,7 +241,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
             transition={{ duration: 0.75, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="text-[clamp(4.25rem,14vw,9rem)] font-black uppercase tracking-tight text-transparent leading-[0.88] mt-2 sm:mt-0 font-outline-fallback"
           >
-            ZICKRIAN
+            Doe
           </Gsap.h1>
 
           {/* Right Decoration */}
