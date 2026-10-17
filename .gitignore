@@ -41,3 +41,4 @@ secret*.json
 
 # deploy/platform artifacts
 .vercel/
+package-lock.json
